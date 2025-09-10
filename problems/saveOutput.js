@@ -20,6 +20,15 @@ multBy2AndSave("showAll") // {5: 10, 10: 20}
 
 function saveOutput(func, magicWord) {
   // your code here
+  let newObj = {};
+  return function (input) {
+    if (input === magicWord) {
+      return newObj;
+    }
+    let result = func(input)
+    newObj[input] = result
+    return result;
+  }
 }
 
 /*
@@ -40,4 +49,4 @@ function runExamples() {
   // e.g., console.log(multBy2AndSave(7));  // -> 14
   console.log(multBy2AndSave("showAll")); // -> {5: 10, 10: 20 /* , 7: 14 if you added it */}
 }
-// runExamples();
+runExamples();

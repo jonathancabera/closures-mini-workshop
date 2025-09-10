@@ -10,7 +10,8 @@ myFunc(); // 2
 */
 
 function callTimes() {
-  // your code here
+  let counter = 0;
+  return () => ++ counter;
 }
 
 /*
@@ -28,7 +29,7 @@ function runExamples() {
   // TODO: Add ONE additional check of your own:
   // e.g., console.log(myFunc()); // -> 3
   // Or create an independent counter:
-  // const another = callTimes();
-  // console.log(another()); // -> 1
+  const another = callTimes();
+  console.log(another()); // -> 1
 }
-// runExamples();
+runExamples();

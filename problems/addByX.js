@@ -9,9 +9,15 @@ addByTwo(3); // 5
 addByTwo(10); // 12
 */
 
-function addByX(x) {
-  // your code here
+function addByX(num) {
+  //Create a new function to be returned by addByX.
+  //Our function should return the input of the function + x.
+  function addNumberToX(x){
+    return num + x; //Returns the result of num + x to the function;
+  }
+  return addNumberToX; //Returns the value of our addNumberToX function.
 }
+
 
 /*
 Minimal Examples (visible for this review problem)
